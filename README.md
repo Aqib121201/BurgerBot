@@ -7,13 +7,14 @@
 [![Transformers](https://img.shields.io/badge/Transformers-4.30+-yellow.svg)](https://huggingface.co/transformers/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## 📋 Abstract
 
-BürgerBot is a comprehensive Natural Language Processing (NLP) system designed to analyze German government documents from official sources including Bundestag, Bundesregierung, and Bundesrat. The system implements a multi-stage pipeline that extracts text from PDFs, translates German content to English using MarianMT, generates summaries via BART, performs sentiment analysis with RoBERTa, discovers topics through LDA and BERTopic, and extracts keywords using YAKE. The results are presented through an interactive Streamlit dashboard with advanced visualizations including word clouds, topic distributions, and sentiment trends.
+##  Abstract
 
-## 🎯 Problem Statement
+BürgerBot is a comprehensive Natural Language Processing (NLP) system designed to analyze German government documents from official sources including Bundestag, Bundesregierung, and Bundesrat. The system implements a multi stage pipeline that extracts text from PDFs, translates German content to English using MarianMT, generates summaries via BART, performs sentiment analysis with RoBERTa, discovers topics through LDA and BERTopic, and extracts keywords using YAKE. The results are presented through an interactive Streamlit dashboard with advanced visualizations including word clouds, topic distributions, and sentiment trends.
 
-German government documents contain valuable information about policies, regulations, and legislative decisions that are often inaccessible to non-German speakers and difficult to analyze at scale. Traditional manual analysis is time-consuming and requires significant linguistic expertise. There is a need for an automated system that can:
+##  Problem Statement
+
+German government documents contain valuable information about policies, regulations, and legislative decisions that are often inaccessible to non German speakers and difficult to analyze at scale. Traditional manual analysis is time consuming and requires significant linguistic expertise. There is a need for an automated system that can:
 
 - **Extract and process** large volumes of German government PDFs
 - **Translate** content for international accessibility
@@ -24,7 +25,7 @@ German government documents contain valuable information about policies, regulat
 
 This project addresses the challenge of making German government information more accessible and analyzable through advanced NLP techniques.
 
-## 📊 Dataset Description
+##  Dataset Description
 
 ### Sources
 - **Bundestag.de**: German Federal Parliament documents
@@ -43,7 +44,7 @@ This project addresses the challenge of making German government information mor
 3. **Chunking**: Overlapping text chunks for processing (1000 chars with 200 char overlap)
 4. **Language Detection**: German text identification and filtering
 
-## 🧪 Methodology
+##  Methodology
 
 ### Translation Model
 - **Architecture**: MarianMT (Helsinki-NLP/opus-mt-de-en)
@@ -75,7 +76,7 @@ This project addresses the challenge of making German government information mor
 - **Purpose**: Automatic keyword identification
 - **Performance**: ~65% precision@10 (estimated)
 
-## 📈 Results
+##  Results
 
 ### Model Performance Metrics
 
@@ -94,12 +95,12 @@ This project addresses the challenge of making German government information mor
 - **Summarization**: Concise summaries maintaining key information
 - **Sentiment Distribution**: Balanced sentiment across government documents
 - **Topic Discovery**: Clear thematic clusters in legislative content
-- **Keyword Relevance**: High-quality German keyword extraction
+- **Keyword Relevance**: High quality German keyword extraction
 
-## 🧠 Explainability & Interpretability
+##  Explainability & Interpretability
 
 ### Translation Explainability
-- Source-target attention visualization
+- Source target attention visualization
 - Confidence scores for translation quality
 - Fallback mechanisms for failed translations
 
@@ -113,10 +114,10 @@ This project addresses the challenge of making German government information mor
 - Attention weights for key phrases
 - Error analysis for misclassifications
 
-## ⚗️ Experiments & Evaluation
+##  Experiments & Evaluation
 
 ### Cross-Validation Setup
-- 5-fold cross-validation for model evaluation
+- 5-fold cross validation for model evaluation
 - Stratified sampling for balanced datasets
 - Random seed control for reproducibility
 
@@ -130,10 +131,10 @@ This project addresses the challenge of making German government information mor
 - Different translation model comparisons
 - Summarization length optimization
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
-📦 BürgerBot/
+BürgerBot/
 ├── 📁 data/                   # Raw & processed datasets
 │   ├── raw/                  # Original PDF files
 │   ├── processed/            # Cleaned and chunked data
@@ -166,7 +167,7 @@ This project addresses the challenge of making German government information mor
 └── run_pipeline.py          # CLI orchestrator
 ```
 
-## 💻 How to Run
+## How to Run
 
 ### Prerequisites
 ```bash
@@ -180,7 +181,7 @@ pip install -r requirements.txt
 ### Quick Start
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/BurgerBot.git
+git clone https://github.com/Aqib121201/BurgerBot.git
 cd BurgerBot
 
 # Run complete pipeline
@@ -217,7 +218,7 @@ docker run -p 8501:8501 burgerbot
 docker run -p 8501:8501 -e RUN_PIPELINE=true burgerbot
 ```
 
-## 🧪 Unit Tests
+##  Unit Tests
 
 ```bash
 # Run all tests
@@ -230,7 +231,7 @@ python -m pytest tests/test_data_preprocessing.py
 python -m pytest tests/ --cov=src --cov-report=html
 ```
 
-## 📚 References
+##  References
 
 ### Academic Papers
 1. **MarianMT**: NLLB Team. "No Language Left Behind: Scaling Human-Centered Machine Translation." arXiv:2207.04672 (2022)
@@ -246,13 +247,13 @@ python -m pytest tests/ --cov=src --cov-report=html
 9. **Streamlit**: "Streamlit: The fastest way to build data apps." https://streamlit.io/
 10. **Transformers**: Wolf, T., et al. "Transformers: State-of-the-art Natural Language Processing." EMNLP 2020
 
-## ⚠️ Limitations
+##  Limitations
 
 ### Current Limitations
 - **Language Scope**: Limited to German government documents
 - **Model Size**: Large transformer models require significant computational resources
 - **Translation Quality**: May lose nuance in complex legal/political terminology
-- **Real-time Processing**: Batch processing limits real-time analysis capabilities
+- **Real-time Processing**: Batch processing limits real time analysis capabilities
 
 ### Future Improvements
 - **Multi-language Support**: Extend to other European government documents
@@ -260,36 +261,36 @@ python -m pytest tests/ --cov=src --cov-report=html
 - **Domain Adaptation**: Fine-tune models on government-specific corpora
 - **Real-time Pipeline**: Implement streaming processing capabilities
 
-## 📄 Full Report
+##  Full Report
 
 For detailed technical analysis and experimental results, see:
 **[📄 Download Full Technical Report](./report/BurgerBot_Technical_Report.pdf)**
 
-## 🧠 Contributions & Acknowledgements
+##  Contributions & Acknowledgements
 
 ### Development Team
-- **Lead Developer**: [Your Name]
-- **NLP Specialist**: [Team Member]
-- **Data Engineer**: [Team Member]
-- **UI/UX Designer**: [Team Member]
+- **Lead Developer & Researcher**: Aqib Siddiqui - Full stack NLP pipeline design, translation/summarization integration, model evaluation, Streamlit dashboard
+- **System Architect & Engineering Mentor**: Nadeem Akhtar - System architecture validation, real-world deployment feasibility, mentoring on scalable NLP design
+Engineering Manager II @ SumUp | Ex-Zalando | M.S. Software Engineering, University of Bonn
+
 
 ### Acknowledgements
-- **Academic Advisors**: [Professor Names]
-- **Institution**: [Your University/Organization]
-- **Open Source Community**: Hugging Face, Streamlit, and PyMuPDF teams
+- **Academic Mentorship**: Special thanks to Nadeem Akhtar for strategic system design guidance, model optimization insights, and feedback on pipeline robustness.
+- **Open Source Community**: Hugging Face, Streamlit, PyMuPDF, and the broader NLP ecosystem for tools that empower accessible and transparent machine learning innovation.
 
 ### Citation
 ```bibtex
 @software{burgerbot2024,
-  title={BürgerBot: German Government Document Analysis System},
-  author={Your Name},
-  year={2024},
-  url={https://github.com/yourusername/BurgerBot}
+  title     = {BürgerBot: German Government Document Analysis System},
+  author    = {Aqib Siddiqui and Nadeem Akhtar},
+  year      = {2024},
+  url       = {https://github.com/Aqib121201/BurgerBot},
+  note      = {Independent NLP Research Project with expert mentorship},
 }
+
 ```
 
 ---
 
 **🇩🇪 BürgerBot** - Making German government information accessible through advanced NLP technology.
 
-*Built with ❤️ for transparency and accessibility in government communication.*
