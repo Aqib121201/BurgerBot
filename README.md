@@ -12,6 +12,20 @@
 
 BürgerBot is a comprehensive Natural Language Processing (NLP) system designed to analyze German government documents from official sources including Bundestag, Bundesregierung, and Bundesrat. The system implements a multi stage pipeline that extracts text from PDFs, translates German content to English using MarianMT, generates summaries via BART, performs sentiment analysis with RoBERTa, discovers topics through LDA and BERTopic, and extracts keywords using YAKE. The results are presented through an interactive Streamlit dashboard with advanced visualizations including word clouds, topic distributions, and sentiment trends.
 
+###  Academic Positioning
+
+#### Research Goal
+This project investigates the feasibility of using transformer-based multilingual NLP models to improve accessibility and interpretability of German government documents. Specifically, it aims to evaluate how well current state-of-the-art models (MarianMT, BART, RoBERTa, BERTopic) can be integrated into a cohesive system for multilingual policy document analysis.
+
+#### Academic Motivation
+Government texts are typically written in formal and domain-specific language that is difficult to parse without legal expertise. For non-native speakers and interdisciplinary researchers, the language barrier creates an accessibility gap. This project addresses a research need in multilingual civic NLP: making dense, legally significant documents interpretable through automated methods. It aligns with active research in explainable AI, low-resource translation, and digital governance.
+
+#### Hypothesis / Learning Objectives
+We hypothesize that combining modular NLP models (translation, summarization, sentiment, topic modeling) can produce interpretable summaries of German policy documents that retain key semantic content. The goal is to assess whether such a pipeline can offer consistent, transparent insights across diverse document types (laws, speeches, reports).
+
+#### Statistical Evaluation
+Each model component is evaluated using standard NLP metrics (BLEU for translation, ROUGE for summarization, F1 for sentiment, coherence for topic modeling). Cross-validation was used for model consistency. While statistical significance testing was not the primary goal, we report approximate metric variances and performed ablation experiments to test component contributions.
+
 ##  Problem Statement
 
 German government documents contain valuable information about policies, regulations, and legislative decisions that are often inaccessible to non German speakers and difficult to analyze at scale. Traditional manual analysis is time consuming and requires significant linguistic expertise. There is a need for an automated system that can:
