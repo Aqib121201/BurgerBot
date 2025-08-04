@@ -275,11 +275,6 @@ python -m pytest tests/ --cov=src --cov-report=html
 - **Domain Adaptation**: Fine-tune models on government-specific corpora
 - **Real-time Pipeline**: Implement streaming processing capabilities
 
-##  Independent Research Project Report
-
-For detailed technical analysis and experimental results, see:
-**[ Download Full Technical Report](./report/BurgerBot_Technical_Report.pdf)**
-
 ##  Contributions & Acknowledgements
 
 ### Development Team
