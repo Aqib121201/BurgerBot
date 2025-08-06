@@ -53,10 +53,9 @@ This project addresses the challenge of making German government information mor
 - **Content Types**: Legislative texts, policy documents, reports, press releases
 
 ### Preprocessing Pipeline
-1. **PDF Extraction**: PyMuPDF for text and table extraction
-2. **Text Cleaning**: URL removal, email filtering, whitespace normalization
-3. **Chunking**: Overlapping text chunks for processing (1000 chars with 200 char overlap)
-4. **Language Detection**: German text identification and filtering
+### BürgerBot NLP Pipeline Architecture
+<img src="images/pipeline_architecture.png" alt="Pipeline Architecture" width="650"/>
+
 
 ##  Methodology
 
@@ -71,6 +70,10 @@ This project addresses the challenge of making German government information mor
 - **Purpose**: Text summarization for key point extraction
 - **Configuration**: Max length 150, min length 30, 4 beams
 - **Performance**: ~40.5 ROUGE-1, ~18.2 ROUGE-2 (estimated)
+###  BART Summarization Coverage Map
+<img src="images/summarization_span_coverage.png" alt="Summarization Coverage" width="650"/>
+
+
 
 ### Sentiment Analysis
 - **Architecture**: RoBERTa (cardiffnlp/twitter-roberta-base-sentiment-latest)
@@ -83,6 +86,12 @@ This project addresses the challenge of making German government information mor
 - **BERTopic**: BERT-based topic modeling with clustering
 - **Purpose**: Theme discovery and document categorization
 - **Evaluation**: Coherence scores and silhouette analysis
+
+
+###  BERTopic Topic-Term Heatmap
+<img src="images/topic_heatmap.png" alt="Topic Heatmap" width="650"/>
+
+
 
 ### Keyword Extraction
 - **Algorithm**: YAKE (Yet Another Keyword Extractor)
@@ -117,16 +126,27 @@ This project addresses the challenge of making German government information mor
 - Source target attention visualization
 - Confidence scores for translation quality
 - Fallback mechanisms for failed translations
+###  Translation Attention Heatmap
+<img src="images/attention_map_translation.png" alt="Translation Attention Heatmap" width="650"/>
+
+
 
 ### Topic Model Interpretability
 - Top words per topic with weights
 - Topic coherence scores
 - Document-topic probability distributions
+<img src="images/topic_modeling_bertopic.png" alt="Topic Coherence Visualization" width="650"/>
+
+
 
 ### Sentiment Analysis Transparency
 - Confidence scores for predictions
 - Attention weights for key phrases
 - Error analysis for misclassifications
+### Sentiment Score Distribution
+<img src="images/sentiment_score_distribution.png" alt="Sentiment Distribution" width="650"/>
+
+
 
 ##  Experiments & Evaluation
 
